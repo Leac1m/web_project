@@ -1,0 +1,15 @@
+<h1>Weather</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="city">City:</label><br>
+    <input type="text" name="city"><br>
+    <input type="submit" value="Submit">
+  </form>
+{% if data.country_code %}
+<h1>{{city}}</h1>
+<h3>country code : {{data.country_code}}</h3>
+<h5>coordinate : {{data.coordinate}}</h5>
+<h5>temp : {{data.temp}}</h5>
+<h5>pressure : {{data.pressure}}</h5>
+<h5>humidity : {{data.humidity}}</h5>
+{% endif %}
